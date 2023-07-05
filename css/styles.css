@@ -18,6 +18,7 @@
     --grey: #2e2f42;
     --icon-accent-color: #404bbf;
     --icon-main-color: #8e8f99;
+    --paragraf-text-color: #ffffff;
 }
 img {
     display: block;
@@ -51,6 +52,7 @@ h1, h2, h3, h4, p, ul {
 
 .page-head {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow:  2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 .page-head-container {
     display: flex;
@@ -68,7 +70,7 @@ h1, h2, h3, h4, p, ul {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--logo-color);
+    color: #404bbf;
     margin-right: 76px;
     
 }
@@ -88,23 +90,21 @@ h1, h2, h3, h4, p, ul {
     color: var(--list-color);
     padding: 24px 0;
     display: block;
-    transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-item::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
     transform: scaleX(0);
     transition: transform 0.3s;
+    
 }
 .menu-item:hover::after {
     transform: scaleX(1);
@@ -129,9 +129,7 @@ h1, h2, h3, h4, p, ul {
     font-size: 16px;
     line-height: 1.5;
     color: var(--link-color);
-    transition-property: color, background-color, box-shadow;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-lst:hover,
@@ -144,18 +142,19 @@ h1, h2, h3, h4, p, ul {
 .section-main {
     background-color: var(--background-color);
     border: 1px solid #000;
-    background: linear-gradient(var(--grey), rgba(46, 47, 66, 0.70)), url("../images/people-office1.jpg");
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office1.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
      padding-top: 188px;
     padding-bottom: 188px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #000;
-    width: 1440px;
-   height: 600px;
+    max-width: 1440px;
+   max-height: 600px;
    flex-shrink: 0;
+   background-position: center; 
 
    
 }
@@ -188,9 +187,7 @@ h1, h2, h3, h4, p, ul {
     border-radius: 4px; 
     margin-left: auto;
     margin-right: auto;
-    transition-property: color, background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 .button:hover,
 .button:focus {
@@ -204,8 +201,14 @@ h1, h2, h3, h4, p, ul {
     gap: 24px;
 }
 .icon-wrap {
-    width: 264px;
+    display: flex;
     height: 112px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px; 
+
 }
  
   
@@ -314,7 +317,7 @@ h1, h2, h3, h4, p, ul {
      box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     }
 .hands-item {
-    padding: 32px 16px;
+    padding: 32px 0
 }
 .media-list {
     display: flex;
@@ -324,45 +327,70 @@ h1, h2, h3, h4, p, ul {
     margin-top: 8px;
     list-style: none;
 }
-.icon-media {
+.media-icon {
     width: 40px;
     height: 40px;
-    fill: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
-.icon-media:hover {
-    fill: #31d0aa;
+
+.media-icon-link {
+    width: 100%;
+    height: 100%;
+    background-color: var(--logo-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.media-icon-link:hover,
+.media-icon-link:focus {
+    background-color: #31d0aa; 
 }
 /*--------------------------------sect customers---------*/
 .customers {
+    padding: 120px 0;  
+}
+.customers-title {
     font-size: 36px;
     line-height: 1.11;
-    text-align: center;
-    text-transform: capitalize;
     color: var(--name-color);
-    margin-top: 120px;
-   
-    
+    margin-bottom: 72px;
+    text-align: center;
+
 }
 .customers-list {
-    display: inline-flex;
+    display: flex;
     align-items: flex-start;
     gap: 24px;
     list-style: none;
-    margin: 72px 156px 120px;
     fill: #8E8F99;
 }
-
-.sect-wrap-list {
-    position: relative;
+.customers-list-icon {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-customers {
+.customers-icon-link {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #8e8f99;
     border-radius: 4px;
-    border: 1px solid #8E8F99;
-    color: #8E8F99;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-   }
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    color: var(--icon-main-color);
+    
+}
+.customers-icon-link:hover, 
+.customers-icon-link:focus {
+    border-color: #404bbf; 
+    color: #404bbf;
+   
+}
 
+.icon-customers {
+    fill: currentColor;
+   }
 
 /*---------------------------------FOOTER---------------------------*/
 .foot {
@@ -370,6 +398,14 @@ h1, h2, h3, h4, p, ul {
     padding: 100px 0;
     display: flex;
 
+}
+.footer-content {
+    display: flex;
+    align-items: baseline;
+}
+.footer-container {
+    margin-right: 120px;
+    margin-left: 156px;
 }
 .footer-logo {
     font-family: "Raleway", sans-serif;
@@ -402,20 +438,91 @@ h1, h2, h3, h4, p, ul {
 }
 .name-foot-media {
     font-size: 16px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.32px;
-    color:  #FFF;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--paragraf-text-color);
     margin-bottom: 16px;
 }
-.icon-media-footer {
-    display: inline-flex;
-    align-items: flex-start;
+.media-list-footer {
+    display: flex;
     gap: 16px;
 }
+.media-icon-footer {
+    width: 40px;
+    height: 40px;
+}
+.footmedia-icon-link {
+    width: 100%;
+    height: 100%;
+    background-color: var(--logo-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footmedia-icon-link:hover,
+.footmedia-icon-link:focus {
+    background-color: #31d0aa;
+}
+.icon-soc-foot {
+    fill: var(--batton-background-color);
+}
+/*--------------------modal---------------------------------*/
+.modal-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+   
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); 
+    width: 408px;
+    min-height: 584px;
+    background: #fcfcfc; 
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2); 
+    border-radius: 4px; 
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.modal-button {
+    position: absolute; 
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc; 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0; 
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+.modal-button:hover,
+.modal-button:focus {
+    background-color: #404bbf; 
+    border: none; 
+
+}
+.icon-button {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    
+}
 /*-----------------------SECTION-PORTFOLIO----------------------*/
 .section-portfolio {
     padding-top: 96px; padding-bottom: 120px; 
@@ -440,16 +547,15 @@ h1, h2, h3, h4, p, ul {
     padding: 12px 24px;
     border: var(--border-color);
     border-radius: 4px; 
-    transition-property: color, background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: olor 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+   
 }
 .press:hover,
 .press:focus {
    color: #FFFFFF;
    background-color: #404BBF;
    border: 1px solid transparent;
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
 }
 .project-list {
     display: flex;
@@ -468,38 +574,34 @@ h1, h2, h3, h4, p, ul {
 .project-li {
     width: calc((100% - 48px) / 3);     
 }
-.image-overlay {
+.image-list {
+    display: block; 
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); 
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.image-list:hover {
+    box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); 
+}
+.image-list.link:hover .text-overlay {
+    transform: translateY(0%);
+}
+.overlay {
     position: relative;
-    display: inline-block;
-}
-.image-overlay  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #4D5AE5;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: transform 250ms ease-in-out;
-}
-.image-overlay:hover .overlay, .image-overlay:focus .overlay {
-    opacity: 1;
-    transform: translateY(0);
+    overflow: hidden; 
 }
 .text-overlay {
-    display: flex;
-    width: 296px;
-    flex-direction: column; 
-    color:  #F4F4FD;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.32px;
-    margin: 40px 32px 164px;
-}
-.project-li:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: absolute; 
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5; 
+    letter-spacing: 0.02em; 
+    color: var(--footer-text-color);
+    padding: 40px 32px;
+    background-color: #4d5ae5; 
+    height: 100%; 
+    width: 100%;
+    transform: translateY(100%); 
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .list-name {
     font-weight: 500;
