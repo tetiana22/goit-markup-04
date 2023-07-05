@@ -92,6 +92,7 @@ h1, h2, h3, h4, p, ul {
     display: block;
     position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #404bbf;
 }
 .menu-item::after {
     content: "";
@@ -330,7 +331,6 @@ h1, h2, h3, h4, p, ul {
 .media-icon {
     width: 40px;
     height: 40px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .media-icon-link {
@@ -341,10 +341,14 @@ h1, h2, h3, h4, p, ul {
     display: flex;
     align-items: center; 
     justify-content: center;
+   transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .media-icon-link:hover,
 .media-icon-link:focus {
-    background-color: #31d0aa; 
+    background-color: #404bbf;
+}
+.icon-soc {
+    fill: var(--batton-background-color);
 }
 /*--------------------------------sect customers---------*/
 .customers {
@@ -368,7 +372,6 @@ h1, h2, h3, h4, p, ul {
 .customers-list-icon {
     width: calc((100% - 120px) / 6);
     height: 88px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-icon-link {
     width: 100%;
@@ -379,6 +382,7 @@ h1, h2, h3, h4, p, ul {
     align-items: center; 
     justify-content: center;
     color: var(--icon-main-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     
 }
 .customers-icon-link:hover, 
@@ -405,7 +409,7 @@ h1, h2, h3, h4, p, ul {
 }
 .footer-container {
     margin-right: 120px;
-    margin-left: 156px;
+    padding-left: 156px;
 }
 .footer-logo {
     font-family: "Raleway", sans-serif;
@@ -460,6 +464,7 @@ h1, h2, h3, h4, p, ul {
     display: flex;
     align-items: center;
     justify-content: center;
+   transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .footmedia-icon-link:hover,
 .footmedia-icon-link:focus {
@@ -517,6 +522,7 @@ h1, h2, h3, h4, p, ul {
 .modal-button:focus {
     background-color: #404bbf; 
     border: none; 
+    fill: #ffffff;
 
 }
 .icon-button {
@@ -547,7 +553,7 @@ h1, h2, h3, h4, p, ul {
     padding: 12px 24px;
     border: var(--border-color);
     border-radius: 4px; 
-    transition: olor 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
    
 }
 .press:hover,
