@@ -400,8 +400,7 @@ h1, h2, h3, h4, p, ul {
 .customers-icon-link:hover, 
 .customers-icon-link:focus {
     border-color: #404bbf; 
-    color: #404bbf;
-   
+    color: #404bbf;   
 }
 
 .icon-customers {
@@ -594,7 +593,8 @@ h1, h2, h3, h4, p, ul {
 .image-list:hover {
     box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); 
 }
-.image-list.link:hover .text-overlay {
+.image-list.link:hover .text-overlay,
+.image-list.link:focus .text-overlay  {
     transform: translateY(0%);
 }
 .overlay {
