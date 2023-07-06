@@ -42,7 +42,8 @@ h1, h2, h3, h4, p, ul {
 }
 
 .container {
-    width: 1158px;
+    width: 100%;
+    max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px 0 15px;
     
@@ -403,17 +404,14 @@ h1, h2, h3, h4, p, ul {
 /*---------------------------------FOOTER---------------------------*/
 .foot {
     background-color: var(--background-color);
-    padding: 100px 0;
-    display: flex;
-
+    padding: 100px 0;    
 }
 .footer-content {
     display: flex;
     align-items: baseline;
 }
-.footer-container {
+.footer-logo-text {
     margin-right: 120px;
-    padding-left: 156px;
 }
 .footer-logo {
     font-family: "Raleway", sans-serif;
@@ -434,7 +432,6 @@ h1, h2, h3, h4, p, ul {
     letter-spacing: 0.02em;
     line-height: 1.5;
     max-width: 264px;
-
 }
 
 .media-list-footer {
